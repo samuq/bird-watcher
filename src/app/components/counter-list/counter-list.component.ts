@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CountersService } from '../../services/counters.service';
 @Component({
   selector: 'app-counter-list',
   templateUrl: './counter-list.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private countersService: CountersService) { }
 
   ngOnInit() {
+    this.countersService.getCounters();
   }
 
 }
