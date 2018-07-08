@@ -9,6 +9,6 @@ export class CountersService {
 
   getCounters() {
     return this.http.get(this.configUrl)
-    .subscribe((status) => console.log(status);;
+    .subscribe((status) => console.log(status));
   }
 }
