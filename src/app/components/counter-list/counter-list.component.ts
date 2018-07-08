@@ -10,7 +10,11 @@ export class CounterListComponent implements OnInit {
   constructor(private countersService: CountersService) { }
 
   ngOnInit() {
-    this.countersService.getCounters();
+    this.countersService.getCounters().then((res)=>{
+      console.log(res);
+    }).catch((err)=>{
+      console.log(err);
+    });
   }
 
 }

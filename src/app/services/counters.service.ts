@@ -7,8 +7,15 @@ export class CountersService {
   constructor(private http: HttpClient) { }
   configUrl = '/api/counters';
 
-  getCounters() {
-    return this.http.get(this.configUrl)
-    .subscribe((status) => console.log(status));
+  getCounters():Promise<any> {
+    return new Promise((resolve, reject) => {
+      // Do some async stuff
+      return this.http.get(this.configUrl)
+      .toPromise()
+      .then((res) => resolve(res))
+      .catch((err) => reject(err));
+      
+    });
+    
   }
 }
