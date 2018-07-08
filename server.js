@@ -22,7 +22,7 @@ const forceSSL = function() {
   // to use the forceSSL
   // middleware
   app.use(forceSSL());
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist/bird-watcher'));
 // Start the app by listening on the default
 // Heroku port
 app.listen(process.env.PORT || 8080);
