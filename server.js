@@ -24,5 +24,6 @@ function getCounters() {
     return pathExists(this.configUrl).then(function (exists) {
         console.log('exists');
         console.log(exists);
+        return exists;
     });
 }
