@@ -20,7 +20,7 @@ app.get('/*', function(req, res) {
     console.log(__dirname);
     res.sendFile(path.join(__dirname + '/dist/bird-watcher/index.html'));
   });
-fileUrl = '/counters.json';
+fileUrl = './tmp/counters.json';
 
 function getCounters(req, res) {
     pathExists(this.fileUrl).then(function (exists) {
