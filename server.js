@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/dist/bird-watcher'));
 // Start the app by listening on the default
 // Heroku port
 app.listen(process.env.PORT || 4200);
-app.get('/counters', function(req, res) {
+app.get('/api/counters', function(req, res) {
 
     res.send(getCounters());
   });

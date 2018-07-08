@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CountersService {
   constructor(private http: HttpClient) { }
-  configUrl = '/counters';
+  configUrl = '/api/counters';
 
   getCounters() {
     return this.http.get(this.configUrl)
