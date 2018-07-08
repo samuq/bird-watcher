@@ -9,7 +9,7 @@ export class CountersService {
   configUrl = '/counters.json';
 
   getCounters() {
-    return this.http.get(this.configUrl).pipe(map((response) => response))
+    return this.http.get(this.configUrl)
     .subscribe((status) => console.log(`status = ${status}`));;
   }
 }
