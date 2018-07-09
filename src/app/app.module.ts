@@ -7,6 +7,7 @@ import { CounterListComponent } from './components/counter-list/counter-list.com
 import { ReportComponent } from './components/report/report.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReversePipe } from './pipes/reverse.pipe';
 const appRoutes: Routes = [
   { path: 'report', component: ReportComponent },
   {
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     CounterComponent,
     CounterListComponent,
-    ReportComponent
+    ReportComponent,
+    ReversePipe
   ],
   imports: [
     RouterModule.forRoot(

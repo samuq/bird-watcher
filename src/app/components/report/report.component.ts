@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ReportsService } from '../../services/reports.service';
-import { ReversePipe } from '../..pipes/flipOrder';
+
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css']
+  styleUrls: ['./report.component.css'],
 })
 export class ReportComponent implements OnInit {
 
