@@ -26,7 +26,7 @@ async function runSample (options) {
       imgType: 'photo',
       imgSize: 'medium'
     });
-    return res.data.items[1].link;
+    return res.data.items[0].link;
 }
 const uri = 'mongodb://heroku_dl0s6x8r:r550tr9vfbegl44jovfb2b46qf@ds129821.mlab.com:29821/heroku_dl0s6x8r'
 // Run the app by serving the static files
