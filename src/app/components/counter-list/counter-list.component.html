@@ -1,3 +1,13 @@
-<p>
-  counter-list works!
-</p>
+<div class="counter-container">
+    <div class="add-counter">
+        <h1>Lisää laskuri</h1>
+        <form (ngSubmit)="onSubmit()" #counterForm="ngForm" class="counter-form">
+            <div class="form-group">
+              <label for="name">Laji: </label>
+              <input type="text" class="form-control" id="species" [(ngModel)]="model.species" name="species" required>
+            </div>
+            <button type="submit" class="btn btn-success">Lisää</button>
+        </form>
+    </div>
+    <app-counter *ngFor="let counter of counters; index as i;" [counter]="counter" (addToCounter)="add($event)"></app-counter>
+</div>

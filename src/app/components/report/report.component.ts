@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ReportsService } from '../../services/reports.service';
+import { ReversePipe } from '../..pipes/flipOrder';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private reportsService: ReportsService) { }
+  report:any[];
   ngOnInit() {
+    this.reportsService.getReport().then((res)=>{
+      console.log(res);
+      this.report = res.data;
+    }).catch((err)=>{
+      console.log(err);
+    });
   }
 
 }

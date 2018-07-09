@@ -1,3 +1,3 @@
-<p>
-  report works!
+<p *ngFor="let rep of report; index as i;" class="report">
+  {{rep.logline}}
 </p>

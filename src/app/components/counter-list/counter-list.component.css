@@ -1,0 +1,33 @@
+.counter-container{
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 90%;
+}
+app-counter, .add-counter{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-counter{
+    min-width:250px;
+    min-height: 250px;
+    margin: 10px;
+}
+.form-group{
+    margin: 0px 0px 20px 0px;
+}
+.counter-form{
+    width:calc(100% - 30px);
+    margin: 10px 15px;
+}
+.form-control{
+    border-color: gray;
+    border-width: 1px;
+    width: 100%
+}

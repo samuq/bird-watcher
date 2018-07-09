@@ -1,13 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  
+    <span style="width:300px">
+        <h1 style="width: 100%;margin:0;">
+            Lintubongari
+        </h1>
+    </span>
 </div>
+
 <nav>
-    <h1>
-        Lintubongari
-    </h1>
-  <a routerLink="/counters" routerLinkActive="active">Laskurit</a>
-  <a routerLink="/report" routerLinkActive="active">Raportti</a>
+
+  <a routerLink="/counters" routerLinkActive="active" class="route">Laskurit</a>
+  <a routerLink="/report" routerLinkActive="active" class="route">Raportti</a>
 </nav>
-<router-outlet></router-outlet>
+<router-outlet style="width:100vw;overflow-x: hidden; margin: 0;padding: 0;"></router-outlet>
 

@@ -1,3 +1,9 @@
-<p>
-  counter works!
-</p>
+<div class="counter-container">
+    <div [ngStyle]="{ 'background-image': 'url('+counter.image + ')'}" class="counter-image" ></div>
+    <p class="counter-species">
+      {{counter.species}}
+    </p>
+    <span>Havaintoja: {{counter.count}} kpl</span>
+    <button (click)="add(counter.species)" class="btn btn-success">Lisää havainto</button>
+</div>
+

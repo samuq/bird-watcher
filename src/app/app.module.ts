@@ -6,6 +6,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { CounterListComponent } from './components/counter-list/counter-list.component';
 import { ReportComponent } from './components/report/report.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const appRoutes: Routes = [
   { path: 'report', component: ReportComponent },
   {
@@ -31,6 +32,8 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

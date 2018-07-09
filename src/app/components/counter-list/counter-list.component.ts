@@ -8,13 +8,37 @@ import { CountersService } from '../../services/counters.service';
 export class CounterListComponent implements OnInit {
 
   constructor(private countersService: CountersService) { }
-
+  counters:any[];
   ngOnInit() {
     this.countersService.getCounters().then((res)=>{
       console.log(res);
+      this.counters = res.data;
     }).catch((err)=>{
       console.log(err);
     });
   }
+  model = {'species': ''};
 
+  submitted = false;
+  add(species:string){
+    this.countersService.add(species).then((res)=>{
+      console.log(res);
+      if(res.data){
+        this.counters = res.data;
+      }
+    }).catch((err)=>{
+      console.log(err);
+    });
+  }
+  onSubmit() { 
+    this.submitted = true; 
+    this.countersService.addCounters(this.model.species).then((res)=>{
+      console.log(res);
+      if(res.data){
+        this.counters = res.data;
+      }
+    }).catch((err)=>{
+      console.log(err);
+    });
+  }
 }
