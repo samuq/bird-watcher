@@ -85,25 +85,26 @@ function setNewSightingLogLine(species, counterArray){
 }
 function getDateTime() {
 
-    var date = new Date();
-    var hour = date.getHours();
+    let date = new Date();
+    let hour = date.getHours();
     hour = (hour < 10 ? "0" : "") + hour;
 
-    var min  = date.getMinutes();
-    min = (min < 10 ? "0" : "") + min;
+    let min  = date.getMinutes();
+    let = (min < 10 ? "0" : "") + min;
 
-    var sec  = date.getSeconds();
+    let sec  = date.getSeconds();
     sec = (sec < 10 ? "0" : "") + sec;
 
-    var year = date.getFullYear();
+    let year = date.getFullYear();
 
-    var month = date.getMonth() + 1;
+    let month = date.getMonth() + 1;
     month = (month < 10 ? "0" : "") + month;
 
-    var day  = date.getDate();
+    let day  = date.getDate();
     day = (day < 10 ? "0" : "") + day;
-    var offset = date.getTimezoneOffset();
-    return day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + sec + " GMT" + offset/60;
+    let offset = date.getTimezoneOffset() / 60;
+    let offsetString = offset == '0' ? '' : offset.toString();
+    return day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + sec + " GMT" + offsetString;
 
 }
 function getReportArray(callback){
