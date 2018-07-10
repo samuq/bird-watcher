@@ -1,3 +1,5 @@
-<p *ngFor="let rep of report | reverse; index as i;" class="report">
-  {{rep.logline}}
-</p>
+<ng-container *ngIf="report">
+  <p *ngFor="let rep of report | reverse; index as i;" class="report">
+    {{rep.logline}}
+  </p>  
+</ng-container>
