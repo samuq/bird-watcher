@@ -5,8 +5,8 @@ const pathExists = require('path-exists');
 const fs = require('fs');
 const mongoose = require('mongoose'); 
 const GoogleImages = require('google-images');
-const CSE_ID = '000159574199953062775:n6zak4l42ou';
-const API_KEY = 'AIzaSyCJQejAeUHanrPAz_c-lxZVf8Q9KO22_KU';
+const CSE_ID = undefined; 
+const API_KEY = undefined;
 const {google} = require('googleapis');
 const customsearch = google.customsearch('v1');
 const bodyParser = require('body-parser');
@@ -28,7 +28,7 @@ async function runSample (options) {
     });
     return res.data.items[0].link;
 }
-const uri = 'mongodb://heroku_dl0s6x8r:r550tr9vfbegl44jovfb2b46qf@ds129821.mlab.com:29821/heroku_dl0s6x8r'
+const uri = undefined;
 // Run the app by serving the static files
 // in the dist directory
 var Counter = mongoose.model('Counter', {
