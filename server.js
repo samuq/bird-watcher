@@ -5,7 +5,7 @@ const pathExists = require('path-exists');
 const fs = require('fs');
 const mongoose = require('mongoose'); 
 const GoogleImages = require('google-images');
-const CSE_ID = undefined;
+const CSE_ID = undefined; 
 const API_KEY = undefined; 
 const {google} = require('googleapis');
 const customsearch = google.customsearch('v1');
@@ -102,8 +102,8 @@ function getDateTime() {
 
     var day  = date.getDate();
     day = (day < 10 ? "0" : "") + day;
-
-    return day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + sec;
+    var offset = date.getTimezoneOffset();
+    return day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + sec + " GMT" + offset/60;
 
 }
 function getReportArray(callback){
