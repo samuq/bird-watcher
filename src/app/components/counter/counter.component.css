@@ -13,10 +13,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 220px;
-    min-height: 160px;
-    width: 220px;
-    height: 160px;
+    min-width: 200px;
+    min-height: 140px;
+    width: 200px;
+    height: 140px;
 }
 .btn{
     margin:10px;
