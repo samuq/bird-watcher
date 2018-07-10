@@ -1,8 +1,8 @@
 <div class="counter-container">
     <div [ngStyle]="{ 'background-image': 'url('+counter.image + ')'}" class="counter-image" ></div>
-    <p class="counter-species">
+    <h3 class="counter-species">
       {{counter.species}}
-    </p>
+    </h3>
     <span>Havaintoja: {{counter.count}} kpl</span>
     <button (click)="add(counter.species)" class="btn btn-success">Lisää havainto</button>
 </div>
