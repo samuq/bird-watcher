@@ -85,7 +85,7 @@ function setNewSightingLogLine(species, counterArray){
 }
 function getDateTime() {
     var options = {
-        timeZone: "America/New_York",
+        timeZone: "Europe/Helsinki",
         year: 'numeric', month: 'numeric', day: 'numeric',
         hour: 'numeric', minute: 'numeric', second: 'numeric'
     };
