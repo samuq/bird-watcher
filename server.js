@@ -5,8 +5,8 @@ const pathExists = require('path-exists');
 const fs = require('fs');
 const mongoose = require('mongoose'); 
 const GoogleImages = require('google-images');
-const CSE_ID = undefined; 
-const API_KEY = undefined; 
+const CSE_ID = '000159574199953062775:n6zak4l42ou';
+const API_KEY = 'AIzaSyCJQejAeUHanrPAz_c-lxZVf8Q9KO22_KU';
 const {google} = require('googleapis');
 const customsearch = google.customsearch('v1');
 const bodyParser = require('body-parser');
@@ -28,7 +28,7 @@ async function runSample (options) {
     });
     return res.data.items[0].link;
 }
-const uri = undefined; 
+const uri = 'mongodb://heroku_dl0s6x8r:r550tr9vfbegl44jovfb2b46qf@ds129821.mlab.com:29821/heroku_dl0s6x8r'
 // Run the app by serving the static files
 // in the dist directory
 var Counter = mongoose.model('Counter', {
@@ -84,18 +84,26 @@ function setNewSightingLogLine(species, counterArray){
     return getDateTime() + " - uusi havainto: " + species + " - kaikki havainnot:" + allSightings;
 }
 function getDateTime() {
-    var options = {
-        timeZone: "Europe/Helsinki",
-        year: 'numeric', month: 'numeric', day: 'numeric',
-        hour: 'numeric', minute: 'numeric', second: 'numeric'
-    };
-    
-    var formatter = new Intl.DateTimeFormat([], options);
-    var date = formatter.format(new Date());
-    date.replace(/-/g, '/')
 
+    var date = new Date();
+    var hour = date.getHours();
+    hour = (hour < 10 ? "0" : "") + hour;
 
-    return date;
+    var min  = date.getMinutes();
+    min = (min < 10 ? "0" : "") + min;
+
+    var sec  = date.getSeconds();
+    sec = (sec < 10 ? "0" : "") + sec;
+
+    var year = date.getFullYear();
+
+    var month = date.getMonth() + 1;
+    month = (month < 10 ? "0" : "") + month;
+
+    var day  = date.getDate();
+    day = (day < 10 ? "0" : "") + day;
+
+    return day + "/" + month + "/" + year + " " + hour + ":" + min + ":" + sec;
 
 }
 function getReportArray(callback){
