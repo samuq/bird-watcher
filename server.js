@@ -90,7 +90,7 @@ function getDateTime() {
     hour = (hour < 10 ? "0" : "") + hour;
 
     let min  = date.getMinutes();
-    let = (min < 10 ? "0" : "") + min;
+    min = (min < 10 ? "0" : "") + min;
 
     let sec  = date.getSeconds();
     sec = (sec < 10 ? "0" : "") + sec;
