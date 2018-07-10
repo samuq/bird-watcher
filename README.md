@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Optional setting tweakings
 
 * Add your own values for API_KEY and CSE_ID in server.js file to use Google Custom Search Engine to fetch bird images.
-* Add MongoUri to use mongoDb.
+* Add your own value for MongoUri in server.js to use mongoDb.
 
 ## Build
 Clone the git repo and run `npm install`.
