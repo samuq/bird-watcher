@@ -9,5 +9,7 @@
             <button type="submit" class="btn btn-success">Lisää</button>
         </form>
     </div>
-    <app-counter *ngFor="let counter of counters | reverse; index as i;" [counter]="counter" (addToCounter)="add($event)"></app-counter>
+    <ng-container *ngIf="counters">
+        <app-counter *ngFor="let counter of counters | reverse; index as i;" [counter]="counter" (addToCounter)="add($event)"></app-counter>
+    </ng-container>
 </div>

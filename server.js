@@ -39,7 +39,7 @@ var Report = mongoose.model('Report', {
     logline : String
 }, 'reports');
 if(uri){
-    mongoose.connect(uri);
+    mongoose.connect(uri, { useNewUrlParser: true });
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
